@@ -15,28 +15,28 @@ public class Player {
     public List<String> makeNumber() {
 
         List<String> numbers;
-
+        System.out.println("숫자를 입력해주세요");
         while (true) {
+
             final String number = scanner.nextLine();
-            numbers = new ArrayList<>();
 
-            for(int i = 0;i<3;i++){
-                numbers.add(String.valueOf(number.charAt(i)));
-            }
-
-            if(Validation.isLengthThree(numbers)) {
+            if (Validation.isNotLengthThree(number)) {
                 System.out.println("3자리 숫자를 입력해주세요!");
                 continue;
             }
 
-            if(Validation.isDuplicated(numbers)) {
+            numbers = new ArrayList<>();
+            for (int i = 0; i < number.length(); i++) {
+                numbers.add(String.valueOf(number.charAt(i)));
+            }
+
+            if (Validation.isDuplicated(numbers)) {
                 System.out.println("중복된 숫자가 있습니다");
                 continue;
             }
 
             break;
         }
-
 
         return numbers;
     }
