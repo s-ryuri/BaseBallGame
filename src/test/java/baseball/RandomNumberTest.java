@@ -11,9 +11,9 @@ public class RandomNumberTest {
     @Test
     void 중복되지않는_숫자_3개를_만든다() {
         final RandomNumber randomNumber = new RandomNumber();
-        final List<String> lottoNumbers = randomNumber.makeNumbers();
+        final List<String> randomNumbers = randomNumber.makeNumbers();
 
-        assertThat(lottoNumbers.size()).isEqualTo(3);
+        assertThat(randomNumbers.size()).isEqualTo(3);
     }
 
 }
