@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class InputView {
+public class Player {
 
     private final Scanner scanner;
 
-    public InputView() {
+    public Player() {
         this.scanner = new Scanner(System.in);
     }
 
