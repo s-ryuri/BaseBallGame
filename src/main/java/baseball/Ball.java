@@ -1,5 +1,6 @@
 package baseball;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ball {
@@ -8,6 +9,12 @@ public class Ball {
     private List<String> userNumbers;
 
     private Strike strike;
+
+    public Ball() {
+        computerNumbers = new ArrayList<>();
+        userNumbers = new ArrayList<>();
+        strike = new Strike();
+    }
     public Ball(final List<String> computerNumbers, final List<String> userNumbers) {
         this.computerNumbers = computerNumbers;
         this.userNumbers = userNumbers;
