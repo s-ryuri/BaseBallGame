@@ -22,17 +22,17 @@ public class ValidationTest {
     @Test
     void 숫자가_3자리_인지를_확인한다() {
         String number = "123";
-        assertThat(Validation.isLengthThree(number)).isTrue();
+        assertThat(Validation.isNotLengthThree(number)).isTrue();
     }
 
     @Test
     void 중복된_숫자가_없는지_확인() {
-        assertThat(Validation.isDuplicated(numbers)).isTrue();
+        assertThat(Validation.isDuplicated(numbers)).isFalse();
     }
 
     @Test
     void 중복된_숫자가_있는_경우() {
         List<String> duplicatedNumber = Arrays.asList("1","1","1");
-        assertThat(Validation.isDuplicated(duplicatedNumber)).isFalse();
+        assertThat(Validation.isDuplicated(duplicatedNumber)).isTrue();
     }
 }
