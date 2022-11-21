@@ -6,10 +6,11 @@ import java.util.List;
 public class Validation {
 
     public static boolean isNotLengthThree(String numbers) {
-        return numbers.length() == 3;
+        return numbers.length() != 3;
     }
 
     public static boolean isDuplicated(final List<String> numbers) {
+        System.out.println(new HashSet<>(numbers));
         return new HashSet<>(numbers).size() != 3;
     }
 }
