@@ -21,7 +21,8 @@ public class ValidationTest {
 
     @Test
     void 숫자가_3자리_인지를_확인한다() {
-        assertThat(Validation.isLengthThree(numbers)).isTrue();
+        String number = "123";
+        assertThat(Validation.isLengthThree(number)).isTrue();
     }
 
     @Test
