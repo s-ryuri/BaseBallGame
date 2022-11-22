@@ -30,9 +30,10 @@ public class User {
         return input.contains("0");
     }
 
-    public String input() {
+    public List<String> input() {
+        String input;
         while (true) {
-            String input = scanner.nextLine();
+            input = scanner.nextLine();
 
             if (isNotLengthThree(input)) {
                 System.out.println("세 자리 숫자를 입력해주세요");
@@ -49,7 +50,14 @@ public class User {
                 continue;
             }
 
-            return input;
+            break;
         }
+
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < input.length(); i++) {
+            result.add(String.valueOf(input.charAt(i)));
+        }
+
+        return result;
     }
 }
