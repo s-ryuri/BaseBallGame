@@ -20,18 +20,8 @@ public class RefereeTest {
     }
 
     @Test
-    void 같은자리_같은숫자_인지확인_STRIKE() {
-        assertThat(referee.hasSameNumber(RANDOM_NUMBERS, 0, "1")).isTrue();
-    }
-
-    @Test
     void STRIKE_개수_세기() {
         assertThat(referee.getStrike(RANDOM_NUMBERS,USER_NUMBERS)).isEqualTo(3);
-    }
-
-    @Test
-    void 같은_숫자_개수_세기() {
-        assertThat(referee.totalSameNumber(RANDOM_NUMBERS,USER_NUMBERS)).isEqualTo(3);
     }
 
     @Test
