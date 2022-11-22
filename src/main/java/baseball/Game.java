@@ -24,16 +24,16 @@ public class Game {
             final List<String> randomNumber = this.randomNumber.generateNumber();
 
             while (true) {
-                final List<String> userNumbers = user.input();
+                final List<String> userNumbers = user.inputNumbers();
                 final int strike = referee.getStrike(randomNumber, userNumbers);
                 final int ball = referee.getBall(randomNumber, userNumbers);
 
-                if(strike == 3) {
+                if (strike == 3) {
                     System.out.println("정답을 맞췄습니다!");
                     System.out.println("게임을 계속할꺼면 1, 아니면 2를 입력해주세요");
 
                     final int num = scanner.nextInt();
-                    if(num == 1) {
+                    if (num == 1) {
                         break;
                     }
                     return;
