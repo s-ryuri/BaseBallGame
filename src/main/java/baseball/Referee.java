@@ -18,16 +18,14 @@ public class Referee {
         return randomNumbers.get(index).equals(userNumber);
     }
 
-
-
     public int getBall(final List<String> randomNumbers, final List<String> userNumbers) {
         return this.totalSameNumber(randomNumbers, userNumbers) - this.getStrike(randomNumbers, userNumbers);
     }
 
     private int totalSameNumber(final List<String> randomNumbers, final List<String> userNumbers) {
         int sameNumber = 0;
-        for(String userNumber : userNumbers) {
-            if(randomNumbers.contains(userNumber)){
+        for (String userNumber : userNumbers) {
+            if (randomNumbers.contains(userNumber)) {
                 sameNumber++;
             }
         }

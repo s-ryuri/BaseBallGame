@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class RandomNumber {
     public List<String> generateNumber() {
         return new Random()
-            .ints(1,10)
+            .ints(1, 10)
             .boxed()
             .distinct()
             .limit(3)
